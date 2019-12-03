@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "one two three four"
+    "key key key key"
+    "five six seven eight"
+    "footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  justify-self: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+.footer {
+  margin-top: 1em;
+  padding: 1em;
+  grid-area: footer;
+  background: #7345be;
+}
+
+.subfoot {
+  display: grid;
+  padding: 1em;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wrapper {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3em minmax(8em, auto);
+}
+
+.wrap {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(8em, auto) 3em;
+}
+
+.foot {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.item {
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.main {
+  padding: 1em;
+  margin: 1em;
+  grid-area: main;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.key {
+  grid-area: key;
+  justify-self: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-areas:
+      "header header"
+      "main main"
+      "one two"
+      "three four"
+      "key key"
+      "five six"
+      "seven eight"
+      "footer footer";
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "main"
+      "one"
+      "two"
+      "three"
+      "four"
+      "key"
+      "five"
+      "six"
+      "seven"
+      "eight"
+      "footer";
+  }
+}
